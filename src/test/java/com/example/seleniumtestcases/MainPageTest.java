@@ -22,6 +22,9 @@ public class MainPageTest {
     public static void setUpAll() {
         Configuration.browserSize = "1280x800";
         SelenideLogger.addListener("allure", new AllureSelenide());
+
+        Configuration.headless=true;
+        Configuration.timeout=60;
     }
 
     @Test
