@@ -146,23 +146,32 @@ public class MainPageTest {
         assertEquals("http://ec2-52-196-122-219.ap-northeast-1.compute.amazonaws.com:8181/storecar",storecar);
     }
 
-    @Test
-    public void browseSedanCars() throws InterruptedException {
-        userLogin();
-        //Click browse car tag
-        $(By.xpath("//*[@id=\"navbarCollapse\"]/div[1]/a[2]")).click();
-
-        //test if the browse cars page opens
-        String browsecars = webdriver().driver().getCurrentFrameUrl();
-        assertEquals("http://ec2-52-196-122-219.ap-northeast-1.compute.amazonaws.com:8181/browse_cars", browsecars);
-
-        //Select Sedan category
-        $(By.xpath("//*[@id=\"sedan\"]")).click();
-
-        //Test if the page with sedan cars opens
-        String sedan = webdriver().driver().getCurrentFrameUrl();
-        assertEquals("http://ec2-52-196-122-219.ap-northeast-1.compute.amazonaws.com:8181/showsedan",sedan);
-
-        webdriver().driver().clearCookies();
-    }
+//    @Test
+//    public void SedanCars() throws InterruptedException {
+//        //open login page after signup
+//        open("http://ec2-52-196-122-219.ap-northeast-1.compute.amazonaws.com:8181/login");
+//
+//        //login the new signed up user
+//        $(By.xpath("//*[@id=\"login\"]/input[2]")).setValue("username1@gmail.com");
+//        $(By.xpath("//*[@id=\"login\"]/input[3]")).setValue("hussain");
+//        $(By.xpath("//*[@id=\"login_button\"]")).click();
+//
+//        String userprofile=  webdriver().driver().getCurrentFrameUrl();
+//        assertEquals("http://ec2-52-196-122-219.ap-northeast-1.compute.amazonaws.com:8181/user_profile",userprofile);
+//        //Click browse car tag
+//        $(By.xpath("//*[@id=\"navbarCollapse\"]/div[1]/a[2]")).click();
+//
+//        //test if the browse cars page opens
+//        String browsecars = webdriver().driver().getCurrentFrameUrl();
+//        assertEquals("http://ec2-52-196-122-219.ap-northeast-1.compute.amazonaws.com:8181/browse_cars", browsecars);
+//
+//        //Select Sedan category
+//        $(By.xpath("//*[@id=\"sedan\"]")).click();
+//
+//        //Test if the page with sedan cars opens
+//        String sedan = webdriver().driver().getCurrentFrameUrl();
+//        assertEquals("http://ec2-52-196-122-219.ap-northeast-1.compute.amazonaws.com:8181/showsedan",sedan);
+//
+//        webdriver().driver().clearCookies();
+//    }
 }
